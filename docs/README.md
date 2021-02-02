@@ -12,6 +12,7 @@ The [Amazon Elastic Block Store](https://aws.amazon.com/ebs/) Container Storage 
 | AWS EBS CSI Driver \ CSI Version       | v0.3.0| v1.0.0 | v1.1.0 |
 |----------------------------------------|-------|--------|--------|
 | master branch                          | no    | no     | yes    |
+| v0.9.0                                 | no    | no     | yes    |
 | v0.8.x                                 | no    | no     | yes    |
 | v0.7.1                                 | no    | no     | yes    |
 | v0.6.0                                 | no    | no     | yes    |
@@ -51,6 +52,7 @@ Following sections are Kubernetes specific. If you are Kubernetes user, use foll
 | AWS EBS CSI Driver \ Kubernetes Version| v1.12 | v1.13 | v1.14 | v1.15 | v1.16 | v1.17 | v1.18+ |
 |----------------------------------------|-------|-------|-------|-------|-------|-------|-------|
 | master branch                          | no    | no+   | no    | no    | no    | yes   | yes   |
+| v0.9.0                                 | no    | no+   | no    | no    | no    | yes   | yes   |
 | v0.8.x                                 | no    | no+   | yes   | yes   | yes   | yes   | yes   |
 | v0.7.1                                 | no    | no+   | yes   | yes   | yes   | yes   | yes   |
 | v0.6.0                                 | no    | no+   | yes   | yes   | yes   | yes   | yes   |
@@ -66,6 +68,7 @@ Following sections are Kubernetes specific. If you are Kubernetes user, use foll
 |AWS EBS CSI Driver Version | Image                                            |
 |---------------------------|--------------------------------------------------|
 |master branch              |amazon/aws-ebs-csi-driver:latest                  |
+|v0.9.0                     |k8s.gcr.io/provider-aws/aws-ebs-csi-driver:v0.9.0 |
 |v0.8.1                     |k8s.gcr.io/provider-aws/aws-ebs-csi-driver:v0.8.1 |
 |v0.7.1                     |amazon/aws-ebs-csi-driver:v0.7.1                  |
 |v0.6.0                     |amazon/aws-ebs-csi-driver:v0.6.0                  |
@@ -175,6 +178,9 @@ Dependencies are managed through go module. To build the project, first turn on 
 * To execute sanity test run: `make test-sanity`
 * To execute integration tests, run: `make test-integration`
 * To execute e2e tests, run: `make test-e2e-single-az` and `make test-e2e-multi-az`
+
+### Release Process
+Please see [Release Process](./RELEASE.md).
 
 **Notes**:
 * Sanity tests make sure the driver complies with the CSI specification
